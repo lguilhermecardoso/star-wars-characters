@@ -47,7 +47,7 @@ export default function CharactersList({ initialData }: CharactersListProps) {
       try {
         const { data } = await axios.get(nextPage);
         const charactersWithWorldNames = await Promise.all(
-          data.results.map(async (character) => {
+          data.results.map(async (character: Character) => {
             const homeWorldName = await getWorldName(character);
             return {
               ...character,
@@ -105,7 +105,7 @@ export default function CharactersList({ initialData }: CharactersListProps) {
         ))}
       </section>
       {nextPage && (
-        <div className="flex w-full flex-1 content-center items-center">
+        <div className="flex w-full flex-1 justify-center">
           <button
             onClick={loadMoreCharacters}
             className="mb-3 w-[350px] rounded border border-gray-950 px-4 py-2 font-bold"

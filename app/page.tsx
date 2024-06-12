@@ -5,11 +5,12 @@ import CharactersList from "@/app/_components/CharactersList";
 import Filter from "@/app/_components/Filter";
 import { getWorldName } from "@/app/_helpers/getWorldName";
 import { useState, useEffect } from "react";
+import { Character } from "./_types/types";
 
 export default function Home() {
   const [initialData, setInitialData] = useState({ results: [], next: null });
   const [filteredCharacters, setFilteredCharacters] = useState([]);
-  const [planets, setPlanets] = useState([]);
+  const [planets, setPlanets] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -34,7 +35,7 @@ export default function Home() {
     } else {
       setFilteredCharacters(
         initialData.results.filter(
-          (character) => character.homeWorldName === selectedPlanet,
+          (character: Character) => character.homeWorldName === selectedPlanet,
         ),
       );
     }
@@ -58,7 +59,7 @@ async function getCharacters(url = "https://swapi.dev/api/people/") {
   try {
     const { data } = await axios.get(url);
     const charactersWithWorldNames = await Promise.all(
-      data.results.map(async (character) => {
+      data.results.map(async (character: Character) => {
         const homeWorldName = await getWorldName(character);
         return {
           ...character,
