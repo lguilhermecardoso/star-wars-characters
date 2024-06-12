@@ -5,4 +5,5 @@ export type Character = {
   height: string;
   mass: string;
   gender: string;
+  imageUrl: string;
 };
