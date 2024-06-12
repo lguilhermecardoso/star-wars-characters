@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Header } from "./_components/_header";
+import { Header } from "./_components/header";
 
 const myFont = localFont({
   src: [
