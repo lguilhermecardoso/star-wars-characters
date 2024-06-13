@@ -1,6 +1,7 @@
 # Star Wars Characters
 
-![Star Wars Characters](https://picsum.photos/800/200) <!-- Adicione uma imagem relevante aqui -->
+![Screenshot 2024-06-13 at 11 32 03](https://github.com/lguilhermecardoso/star-wars-characters/assets/15979107/b659d29b-5e50-4834-9898-ca65df7d348e)
+
 
 ## Descrição
 
