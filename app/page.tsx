@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import axios from "axios";
 import CharactersList from "@/app/_components/CharactersList";
 import Filter from "@/app/_components/Filter";
@@ -8,8 +9,11 @@ import { useState, useEffect } from "react";
 import { Character } from "./_types/types";
 
 export default function Home() {
-  const [initialData, setInitialData] = useState({ results: [], next: null });
-  const [filteredCharacters, setFilteredCharacters] = useState([]);
+  const [initialData, setInitialData] = useState<{
+    results: Character[];
+    next: string | null;
+  }>({ results: [], next: null });
+  const [filteredCharacters, setFilteredCharacters] = useState<Character[]>([]);
   const [planets, setPlanets] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -29,7 +33,7 @@ export default function Home() {
     fetchData();
   }, []);
 
-  function handleFilterChange(selectedPlanet) {
+  function handleFilterChange(selectedPlanet: string) {
     if (selectedPlanet === "All") {
       setFilteredCharacters(initialData.results);
     } else {
