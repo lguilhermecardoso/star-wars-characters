@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Star Wars Characters
 
-## Getting Started
+![Star Wars Characters](https://picsum.photos/800/200) <!-- Adicione uma imagem relevante aqui -->
 
-First, run the development server:
+## Descrição
+
+O projeto **Star Wars Characters** é uma aplicação web desenvolvida com Next.js que consome a API do Star Wars para listar personagens. A aplicação permite carregar mais personagens dinamicamente e filtrar personagens por seu planeta natal.
+
+## Get in Touch
+
+https://star-wars-characters-gold.vercel.app/
+
+## Funcionalidades
+
+- **Listagem de Personagens**: Exibe uma lista de personagens do universo Star Wars com informações detalhadas como nome, altura, massa, gênero e planeta natal.
+- **Carregar Mais Personagens**: Botão para carregar mais personagens dinamicamente.
+- **Filtro por Planeta Natal**: Filtro para visualizar personagens de um planeta específico ou todos os planetas.
+- **Imagens dos Personagens**: Exibe imagens dos personagens usando a API do Picsum.
+
+## Tecnologias Utilizadas
+
+- **Next.js**: Framework React para renderização no lado do servidor.
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **Axios**: Cliente HTTP baseado em Promises para fazer requisições à API.
+- **Jest**: Framework de testes em JavaScript.
+- **Testing Library**: Conjunto de utilitários para testar componentes React.
+
+## Instalação
+
+Siga os passos abaixo para configurar e executar o projeto localmente:
+
+1. **Clone o repositório:**
+
+```bash
+git clone https://github.com/seu-usuario/star-wars-characters.git
+cd star-wars-characters
+```
+
+2. **Instale as dependências**
+
+```bash
+npm install
+```
+
+3. **Execute o servidor de desenvolvimento**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Abra seu navegador**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### **Acesse http://localhost:3000 para ver a aplicação em execução.**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Estrutura do Projeto
 
-## Learn More
+```perl
+.
+├── app
+│   ├── _components
+│   │   ├── CharactersList.tsx
+│   │   ├── Filter.tsx
+│   │   └── __tests__
+│   │       ├── CharactersList.test.tsx
+│   │       ├── Filter.test.tsx
+│   ├── _helpers
+│   │   └── getWorldName.ts
+│   ├── _types
+│   │   └── types.ts
+│   └── page.tsx
+├── public
+│   └── ...
+├── jest.config.js
+├── jest.setup.js
+├── package.json
+├── README.md
+└── tsconfig.json
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contribuição
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Se você quiser contribuir com este projeto, por favor siga os passos abaixo:
 
-## Deploy on Vercel
+1. Fork o repositório
+2. Crie uma branch para sua feature (git checkout -b feature/nova-feature)
+3. Commit suas mudanças (git commit -m 'Adiciona nova feature')
+4. Faça o push para a branch (git push origin feature/nova-feature)
+5. Abra um Pull Request
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Licença
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+Autor
+GuilhermeCardoso - @lguilhermecardoso
